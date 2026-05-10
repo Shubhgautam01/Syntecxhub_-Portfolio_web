@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Modern font stack */
+}
+
+
+*::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
+
+.board {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+    background-image:radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%), url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFwdG9wJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#todo-form {
+    padding: 40px 40px 20px;
+    display: flex;
+    z-index: 10;
+}
+
+#todo-form input {
+    padding: 14px 20px;
+    margin-right: 12px;
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); 
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#todo-form input:focus {
+    background: white;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+#todo-form button {
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    background: #000000; 
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s active;
+}
+
+#todo-form button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+.lens {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 20px 40px;
+    overflow-x: auto;
+    height: 100%;
+}
+
+.heaing {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+
+.swim-lane {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(244, 244, 244, 0.7); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 16px;
+    border-radius: 12px;
+    width: 280px; 
+    min-height: 150px;
+    max-height: 80vh;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+
+.task {
+    background: white;
+    color: #333;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: move;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    background: white;
+    border-left: 5px solid #4a90e2; 
+    color: #444; /* Initial slightly grey-black for contrast */
+    font-weight: 500; /* Medium weight to start */
+    transition: all 0.2s ease-in-out;
+}
+
+.task:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    background: #f0f7ff; 
+    border-left: 5px solid #0056b3; 
+    color: #0056b3; 
+    transform: translateX(5px); 
+    background: linear-gradient(135deg, #6eb0fb 0%, #e37777 100%);
+    color: white;
+    border-left-color: transparent; 
+    box-shadow: 0 10px 20px rgba(110, 142, 251, 0.4);
+}
+
+
