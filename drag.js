@@ -16,7 +16,7 @@ droppables.forEach((zone) => {
         e.preventDefault();
 
 
-        const bottomTask = insertAboutTask(zone, e.clientY);
+        const bottomTask = insertAboveTask(zone, e.clientY);
         const curTask = document.querySelector(".is-dragging")
 
 
@@ -28,7 +28,7 @@ droppables.forEach((zone) => {
     });
 });
 
-const insertAboutTask = (zone, mouseY) => {
+const insertAboveTask = (zone, mouseY) => {
     const els = zone.querySelectorAll(".task:not(.is-dragging)");
     let closestTask = null;
     let closestOffset = Number.NEGATIVE_INFINITY;
